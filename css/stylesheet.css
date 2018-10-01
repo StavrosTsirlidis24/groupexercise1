@@ -109,3 +109,9 @@ a.img-singles {
     background: rgba(208, 163, 93, 0.92);
 }
 
+'
+@media screen and (max-width: 991px) {   
+	#course-text {
+		padding: 22px 0;
+	}
+}
