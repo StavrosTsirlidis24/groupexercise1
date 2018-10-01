@@ -82,6 +82,7 @@ a.img-singles {
     font-size: 0.91em;
     font-weight: 600;
     padding: 4px;
+    text-shadow: 1px 1px 0.5px rgb(120,120,120);
 }
 
 .img-singles:hover {
