@@ -11,16 +11,17 @@ var courseImg = document.getElementById('course-img');
 var courseTitle = document.getElementById('course-title');
 var imgTest = document.getElementById('test-img');
 // buttons and links
+var courseLinks = document.getElementsByClassName('course-link');
 var link1 =document.getElementById('link-1');
-var link1 =document.getElementById('link-2');
-var link1 =document.getElementById('link-3');
-var link1 =document.getElementById('link-4');
+var link2 =document.getElementById('link-2');
+var link3 =document.getElementById('link-3');
+var link4 =document.getElementById('link-4');
 var btn1 = document.getElementById('btn-1');
 var btn2 = document.getElementById('btn-2');
 var btn3 = document.getElementById('btn-3');
 var btn4 = document.getElementById('btn-4');
 var btnBack = document.getElementById('back-btn');
-var btnTest = document.getElementsByClassName('btn-carousel')[0];
+//var btnTest = document.getElementsByClassName('btn-carousel')[0];
 var btnAdd = document.getElementsByClassName('btn-add')[0];
 var myTrainingSearchedBtn = document.getElementById('myTraining-SearchedBtn');
 
@@ -44,7 +45,7 @@ imgArr[3] = "images/beer_430_290.jpg";
 // HANDLERS 
 window.onload = changeImage;
 btnBack.addEventListener('click', retRow);
-btnTest.addEventListener('click', testCarousel);
+//btnTest.addEventListener('click', testCarousel);
 
 
 // image carousel        
@@ -78,6 +79,41 @@ function addBtnListener() {
     for (var i = 0; i < imgSing.length; i++) {
         imgSing[i].addEventListener('click', clickImg);
     }
+    for ( var i = 0; i < courseLinks.length; i++ ) {
+        courseLinks[i].addEventListener('click', clickLink);       
+    }            
+}
+
+
+function clickLink(event) {
+    var linkTarget = event.target.id;
+    var showTitle = event.target.innerText;
+
+    rowCar.classList.remove('row-car')
+    rowCar.classList.add('row-car-hd')
+    rowCourseHd.classList.add('row-course');
+    rowCourseHd.classList.remove('row-course-hd');
+
+    switch (linkTarget) {
+        case "link-1":
+            courseImg.src = imgArr[0];
+            courseTitle.innerText = showTitle;
+            break;
+        case "link-2":
+            courseImg.src = imgArr[1];
+            courseTitle.innerText = showTitle;
+            break;
+        case "link-3":
+            courseImg.src = imgArr[2];
+            courseTitle.innerText = showTitle;
+            break;
+        case "link-4":
+            courseImg.src = imgArr[3];
+            courseTitle.innerText = showTitle;
+            break;
+        default:
+            break;
+    }
 }
 
 // show selected course field
@@ -91,7 +127,7 @@ function clickImg(event) {
     rowCourseHd.classList.remove('row-course-hd');
 
     switch (imgTarget) {
-        case "btn-1 || link1":
+        case "btn-1":
             courseImg.src = imgArr[0];
             courseTitle.innerText = showTitle;
             break;
