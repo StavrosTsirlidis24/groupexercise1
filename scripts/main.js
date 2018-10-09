@@ -10,6 +10,8 @@ var courseInfo = document.getElementById('course-info');
 var courseImg = document.getElementById('course-img');
 var courseTitle = document.getElementById('course-title');
 var imgTest = document.getElementById('test-img');
+var UserName = document.getElementById('user-Name');
+var UserPass = document.getElementById('user-Password');
 // buttons and links
 var courseLinks = document.getElementsByClassName('course-link');
 var link1 =document.getElementById('link-1');
@@ -21,19 +23,19 @@ var btn2 = document.getElementById('btn-2');
 var btn3 = document.getElementById('btn-3');
 var btn4 = document.getElementById('btn-4');
 var btnBack = document.getElementById('back-btn');
+var btnAdminLogin =document.getElementById('amdminlogin-Btn');
 //var btnTest = document.getElementsByClassName('btn-carousel')[0];
-var btnAdd = document.getElementsByClassName('btn-add')[0];
-var myTrainingSearchedBtn = document.getElementById('myTraining-SearchedBtn');
 
 
-//modalBox
-modalBox.style.display="none";
+
 
 // variables
 var i = 0;
 var imgArr = [];
 var carousel = [];
 var dur = 3500;
+var adminName ="admin";
+var adminpass ="GroupSpade!"
 
 // image array
 imgArr[0] = "images/astronaut_430_290.jpg";
@@ -45,6 +47,7 @@ imgArr[3] = "images/beer_430_290.jpg";
 // HANDLERS 
 window.onload = changeImage;
 btnBack.addEventListener('click', retRow);
+btnAdminLogin.addEventListener('click',modalBoxAdmin);
 //btnTest.addEventListener('click', testCarousel);
 
 
@@ -154,5 +157,18 @@ function retRow() {
     rowCourseHd.classList.remove('row-course');
     rowCourseHd.classList.add('row-course-hd');
 }
+
+function modalBoxAdmin() {
+    
+ if(UserName.value == adminName && UserPass.value == adminpass ){
+
+    btnAdminLogin.dataset.target="#admin-modal-box";
+ }
+ else{
+    btnAdminLogin.dataset.target="#admin-modal-box-loginfail";
+ }
+ 
+}
+
 
 
