@@ -102,7 +102,7 @@ h1{
 
     background-color: rgb(75, 75, 75);
     height: auto;
-    padding:1.5rem;
+    padding:3rem 3rem 0rem 3rem;
 }
 
 .text-content p{
@@ -209,13 +209,13 @@ a.img-singles {
 #apply{
 
     background-color: grey;
-    padding: 25px;
+    padding: 3rem;
 }
 
 #trainings{
 
     background-color: rgb(49, 72, 75);
-    padding: 25px;
+    padding: 3rem;
 }
 
 /* Footer-style */
@@ -279,3 +279,14 @@ a.img-singles {
     margin: 20 0 0 20;
 }
 
+#modal-Box{
+    display: "none";
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position:fixed;
+    z-index: 1;
+    left:0px;
+    top:0px;
+}
+#

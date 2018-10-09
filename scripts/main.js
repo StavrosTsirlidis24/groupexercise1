@@ -1,6 +1,7 @@
 "use strict"
 
 // DOM ANCHORS
+var modalBox = document.getElementById("modal-Box");
 var rowCar = document.getElementsByClassName('row-car')[0];
 var rowCourseHd = document.getElementsByClassName('row-course-hd')[0];
 var imgCar = document.getElementById('img-car');
@@ -21,8 +22,11 @@ var btn4 = document.getElementById('btn-4');
 var btnBack = document.getElementById('back-btn');
 var btnTest = document.getElementsByClassName('btn-carousel')[0];
 var btnAdd = document.getElementsByClassName('btn-add')[0];
+var myTrainingSearchedBtn = document.getElementById('myTraining-SearchedBtn');
 
 
+//modalBox
+modalBox.style.display="none";
 
 // variables
 var i = 0;
@@ -114,4 +118,5 @@ function retRow() {
     rowCourseHd.classList.remove('row-course');
     rowCourseHd.classList.add('row-course-hd');
 }
+
 
