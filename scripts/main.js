@@ -10,6 +10,10 @@ var courseImg = document.getElementById('course-img');
 var courseTitle = document.getElementById('course-title');
 var imgTest = document.getElementById('test-img');
 // buttons and links
+var link1 =document.getElementById('link-1');
+var link1 =document.getElementById('link-2');
+var link1 =document.getElementById('link-3');
+var link1 =document.getElementById('link-4');
 var btn1 = document.getElementById('btn-1');
 var btn2 = document.getElementById('btn-2');
 var btn3 = document.getElementById('btn-3');
@@ -17,6 +21,7 @@ var btn4 = document.getElementById('btn-4');
 var btnBack = document.getElementById('back-btn');
 var btnTest = document.getElementsByClassName('btn-carousel')[0];
 var btnAdd = document.getElementsByClassName('btn-add')[0];
+
 
 
 // variables
@@ -82,7 +87,7 @@ function clickImg(event) {
     rowCourseHd.classList.remove('row-course-hd');
 
     switch (imgTarget) {
-        case "btn-1":
+        case "btn-1 || link1":
             courseImg.src = imgArr[0];
             courseTitle.innerText = showTitle;
             break;
