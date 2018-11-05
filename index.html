@@ -46,7 +46,7 @@
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">Min profil</a>
                             <a class="dropdown-item" href="#">Inställningar</a>
-                            <button class="dropdown-item" data-toggle="modal" data-target="#my-searched-training">Sökta utbildningar</button>
+                            <button id="applied-Educations-btn" type="button" class="dropdown-item" data-toggle="modal" data-target="#my-searched-training">Sökta utbildningar</button>
                         </div>
                     </li>
 
@@ -120,52 +120,65 @@
             </div>
         </div>
 
-        <div class="row-form">
+        <div class=" row row-form">
             <!-- form -->
-            <div class="col-style col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div id="trainings">
+            <div class="col-style col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="trainings">
                     <div class="form-group">
                         <h2>Ansök till en utbildning</h2>
                         <form>
                             <label>Välj stad</label><br>
-                            <select>
-                                <option>Stockholm</option>
-                                <option>Kalmar/option>
-                                <option>Göteborg</option>
-                                <option>Malmö</option>
+                            <select id="city-select">
+                                <option value="Stockholm">Stockholm</option>
+                                <option value="Kalmar">Kalmar</option>
+                                <option value="Göteborg">Göteborg</option>
+                                <option value="Malmö">Malmö</option>
                             </select>
                             <br>
                             <br>
                             <label>Välj utbildning</label><br>
-                            <select>
-                                <option>Satellit reparatör</option>
-                                <option>Mario Look a like</option>
-                                <option>Svamp plockare</option>
-                                <option>Beerista</option>
+                            <select id="education-select">
+                                <option value="Satellit reparatör">Satellit reparatör</option>
+                                <option value="Mario Look a like">Mario Look a like</option>
+                                <option value="Svamp plockare">Svamp plockare</option>
+                                <option value="Beerista">Beerista</option>
                             </select>
                             <br>
                             <br>
-                            <button type="button" class="btn" data-toggle="collapse" data-target="#apply">Ansök</button>
-                        </form>
-                    </div>
-                </div>
-
-                <div id="apply" class="collapse">
-                    <div class="form-group">
-                        <h2>Fyll i och bekräfta</h2><br>
-                        <form>
-                            <label>Förnamn</label><br>
-                            <input type="text"><br>
-                            <label>Efternamn</label><br>
-                            <input type="text"><br>
-                            <label>Email</label><br>
-                            <input type="email"><br><br>
-                            <button type="button" class="btn">Bekräfta</button>
+                            <button class="btn" id="choose-edc-btn" type="button"  >Lägg till</button>
+                            <br>
+                            <br>
+                            <button class="btn" id="apply-Btn" type="button" class="btn" data-toggle="collapse" data-target="#apply">Ansök</button>
                         </form>
                     </div>
                 </div>
             </div>
+
+            <div class="trainings col-style col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <h2>Dina valda utbildningar</h2>
+                    <p id="choosed-edc-holder"></p>
+            </div>
+            <div id="apply" class="collapse  col-style col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                <div class="form-group">
+                    <h2>Fyll i och bekräfta</h2><br>
+                    <form>
+                        <label>Förnamn</label><br>
+                        <input type="text"><br>
+                        <label>Efternamn</label><br>
+                        <input type="text"><br>
+                        <label>Email</label><br>
+                        <input type="email"><br><br>
+                        <button type="button" class="btn">Bekräfta</button>
+                    </form>
+                </div>
+            </div>
+
         </div>
+        
+    </div>
+
+    
+        
 
         <!-- Footer -->
         <div class="row row-footer">
@@ -226,12 +239,8 @@
                         <button type="button" class="btn" data-dismiss="modal"><b>X</b></button>
                     </div>
                     <div class="modal-body">
-                            <p>Här kan vi skriva ut arrayen med ansökta utbildningar! (Nedan är fejk!)</p>
-                            <p>Stockholm - Svampplockare</p>
-                            <p>Kalmar - Beerista</p>
-                            <p>Stockholm - Satellit reparatör</p>
-                            <p>Stockholm - Mario Look a like</p>
-                            <p>Kalmar - Svamplockare</p>
+                            <p id="choosed-edc-holder2"></p>
+                            
                     </div>
                     <div class="modal-footer">
                                 <button type="button" class="btn" data-dismiss="modal">Stäng</button>

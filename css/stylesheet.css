@@ -9,6 +9,7 @@
 
 button{
     cursor: pointer;
+    
 }
 body {
     background: rgb(0, 0, 0);
@@ -18,6 +19,12 @@ body {
 
 p {
     color: rgb(77,77,77);
+}
+
+#choosed-edc-holder {
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
 }
 h3 {
     color: rgb(57,57,57);
@@ -114,12 +121,14 @@ h1{
 }
 
 .img-links {
+    font-size: 26px;
+    font-family: 'Roboto Condensed', sans-serif;
     position: absolute;
     height: 100%;
     top: 0;
     right: 0;
-    background: rgba(136, 129, 129, 0.6);
-    color: rgb(228, 228, 228);
+    background: rgba(77, 76, 76, 0.63);
+    color: rgb(255, 255, 255);
     padding: 8px;
 }
 
@@ -128,11 +137,11 @@ a.img-singles {
     font-size: 0.91em;
     font-weight: 600;
     padding: 4px;
-    text-shadow: 1px 1px 0.5px rgb(120,120,120);
+    
 }
 
 .img-singles:hover {
-    color: rgb(255, 255, 255) !important;
+    color: orange !important;
     cursor: pointer;
 }
 
@@ -199,6 +208,7 @@ a.img-singles {
     background-color: rgb(0, 0, 0);
     
 }
+
 .row-form h2 {
     font-family: 'Roboto Condensed', sans-serif;
     color:orange;
@@ -207,12 +217,14 @@ a.img-singles {
 
     background-color: grey;
     padding: 3rem;
+    
 }
 
-#trainings {
+.trainings {
     background-color: rgb(49, 72, 75);
     padding: 3rem;
 }
+
 
 /* Footer-style */
 .row-footer {

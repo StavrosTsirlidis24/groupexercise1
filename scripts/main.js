@@ -12,6 +12,10 @@ var courseTitle = document.getElementById('course-title');
 var imgTest = document.getElementById('test-img');
 var UserName = document.getElementById('user-Name');
 var UserPass = document.getElementById('user-Password');
+var citySelect = document.getElementById('city-select');
+var educationSelect = document.getElementById('education-select');
+
+
 // buttons and links
 var courseLinks = document.getElementsByClassName('course-link');
 var link1 =document.getElementById('link-1');
@@ -23,6 +27,8 @@ var btn2 = document.getElementById('btn-2');
 var btn3 = document.getElementById('btn-3');
 var btn4 = document.getElementById('btn-4');
 var btnBack = document.getElementById('back-btn');
+var btnChooseEducation = document.getElementById('choose-edc-btn');
+var btnApply = document.getElementById('apply-Btn');
 var btnAdminLogin =document.getElementById('amdminlogin-Btn');
 //var btnTest = document.getElementsByClassName('btn-carousel')[0];
 
@@ -37,6 +43,10 @@ var dur = 3500;
 var adminName ="admin";
 var adminpass ="GroupSpade!"
 
+//Array
+var choosedEducation = [];
+var objPuppil;
+
 // image array
 imgArr[0] = "images/astronaut_430_290.jpg";
 imgArr[1] = "images/marioDino_430_290.jpg";
@@ -48,6 +58,10 @@ imgArr[3] = "images/beer_430_290.jpg";
 window.onload = changeImage;
 btnBack.addEventListener('click', retRow);
 btnAdminLogin.addEventListener('click',modalBoxAdmin);
+btnChooseEducation.addEventListener('click',addEducation);
+btnApply.addEventListener('click',addToPuppil);
+
+
 //btnTest.addEventListener('click', testCarousel);
 
 
@@ -65,12 +79,12 @@ function changeImage() {
     imgCar.src = imgArr[i];
 
     if (i < imgArr.length - 1) {
-        imgSing[i].style.color = "rgb(255, 255, 255)";
-        imgSing[i].style.fontSize = "0.93em";
+        imgSing[i].style.color = "black";
+       
         i++;
     } else {
-        imgSing[imgArr.length - 1].style.color = "rgb(255, 255,255)";
-        imgSing[imgArr.length - 1].style.fontSize = "0.93em";
+        imgSing[imgArr.length - 1].style.color = "black";
+        
         i = 0;
     }
     addBtnListener();
@@ -170,5 +184,21 @@ function modalBoxAdmin() {
  
 }
 
+function addEducation(){
+    
+    
 
 
+    choosedEducation.push(citySelect.value + " - " + educationSelect.value + "<br>");
+    console.log(choosedEducation);
+    document.getElementById('choosed-edc-holder').innerHTML = choosedEducation.join("");
+    document.getElementById('choosed-edc-holder2').innerHTML = choosedEducation.join("");
+}
+
+function addToPuppil(){
+
+     objPuppil = {
+
+     }
+
+}
